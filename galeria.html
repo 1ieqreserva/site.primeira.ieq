@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galeria | Primeira IEQ</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="assets/logo.png">
+<span>Primeira IEQ</span>
+</div>
+
+<nav>
+
+<a href="index.html">Início</a>
+<a href="galeria.html">Galeria</a>
+<a href="sermoes.html">Sermões</a>
+<a href="contato.html">Contato</a>
+
+</nav>
+
+</header>
+
+<section class="page-hero">
+
+<h1>Galeria</h1>
+
+<p>
+Momentos especiais da nossa igreja.
+</p>
+
+</section>
+
+<section class="galeria-grid">
+
+<img src="assets/fotos/1.jpg" onclick="abrirImagem(this.src)">
+<img src="assets/fotos/2.jpg" onclick="abrirImagem(this.src)">
+<img src="assets/fotos/3.jpg" onclick="abrirImagem(this.src)">
+<img src="assets/fotos/4.jpg" onclick="abrirImagem(this.src)">
+<img src="assets/fotos/5.jpg" onclick="abrirImagem(this.src)">
+<img src="assets/fotos/6.jpg" onclick="abrirImagem(this.src)">
+
+</section>
+
+<div id="lightbox">
+
+<span onclick="fecharImagem()">&times;</span>
+
+<img id="imagem-ampliada">
+
+</div>
+
+<script>
+
+function abrirImagem(src){
+
+document.getElementById("lightbox").style.display = "flex";
+
+document.getElementById("imagem-ampliada").src = src;
+
+}
+
+function fecharImagem(){
+
+document.getElementById("lightbox").style.display = "none";
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,13 +1,55 @@
-<form>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<input id="usuario" placeholder="Usuário">
+<head>
 
-<input id="senha"
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login Administrativo</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="login-card">
+
+<h1>Primeira IEQ</h1>
+
+<p>Painel Administrativo</p>
+
+<form id="loginForm">
+
+<input
+type="text"
+id="usuario"
+placeholder="Usuário"
+required>
+
+<input
 type="password"
-placeholder="Senha">
+id="senha"
+placeholder="Senha"
+required>
 
-<button onclick="login()">
+<button type="submit">
+
 Entrar
+
 </button>
 
 </form>
+
+</div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

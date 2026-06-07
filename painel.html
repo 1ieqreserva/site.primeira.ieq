@@ -1,19 +1,126 @@
-<div class="dashboard">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<div class="box">
-Eventos
-</div>
+<head>
 
-<div class="box">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel Administrativo</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Primeira IEQ</h2>
+
+<ul>
+
+<li onclick="mostrar('dashboard')">
+Dashboard
+</li>
+
+<li onclick="mostrar('oracoes')">
 Pedidos de Oração
+</li>
+
+<li onclick="mostrar('inscricoes')">
+Inscrições
+</li>
+
+<li onclick="mostrar('eventos')">
+Eventos
+</li>
+
+<li onclick="logout()">
+Sair
+</li>
+
+</ul>
+
 </div>
 
-<div class="box">
-Galeria
+<div class="content">
+
+<section id="dashboard">
+
+<h1>Dashboard</h1>
+
+<div class="stats">
+
+<div class="stat-card">
+
+<h2 id="totalOracoes">
+0
+</h2>
+
+<p>Pedidos</p>
+
 </div>
 
-<div class="box">
-Sermões
+<div class="stat-card">
+
+<h2 id="totalInscricoes">
+0
+</h2>
+
+<p>Inscrições</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+1
+</h2>
+
+<p>Administrador</p>
+
 </div>
 
 </div>
+
+</section>
+
+<section id="oracoes" style="display:none">
+
+<h1>Pedidos de Oração</h1>
+
+<div id="listaOracoes"></div>
+
+</section>
+
+<section id="inscricoes" style="display:none">
+
+<h1>Inscrições</h1>
+
+<div id="listaInscricoes"></div>
+
+</section>
+
+<section id="eventos" style="display:none">
+
+<h1>Eventos</h1>
+
+<p>
+Conferência Despertar
+</p>
+
+<p>
+FLOW Young
+</p>
+
+</section>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

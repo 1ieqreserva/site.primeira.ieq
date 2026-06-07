@@ -1,19 +1,41 @@
-const pedidos =
-JSON.parse(localStorage.getItem("pedidos")) || [];
+const oracaoForm =
+document.getElementById("oracaoForm");
 
-function salvarPedido(){
+if(oracaoForm){
 
-const nome =
-document.getElementById("nome").value;
+oracaoForm.addEventListener("submit",(e)=>{
 
-const pedido =
-document.getElementById("pedido").value;
+e.preventDefault();
 
-pedidos.push({nome,pedido});
+const pedido = {
+
+nome:
+document.getElementById("nome").value,
+
+pedido:
+document.getElementById("pedido").value,
+
+data:
+new Date().toLocaleDateString()
+
+};
+
+let pedidos =
+JSON.parse(
+localStorage.getItem("pedidos")
+) || [];
+
+pedidos.push(pedido);
 
 localStorage.setItem(
 "pedidos",
 JSON.stringify(pedidos)
 );
+
+alert("Pedido enviado com sucesso!");
+
+oracaoForm.reset();
+
+});
 
 }

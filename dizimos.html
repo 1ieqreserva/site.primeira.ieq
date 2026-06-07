@@ -1,17 +1,80 @@
-<section>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<h1>Dízimos e Ofertas</h1>
+<head>
 
-<p>
-Chave PIX:
-</p>
+<meta charset="UTF-8">
 
-<h2>
-pix@primeiraieq.com.br
-</h2>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dízimos e Ofertas</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="assets/logo.png">
+
+<span>Primeira IEQ</span>
+
+</div>
+
+</header>
+
+<section class="page-hero">
+
+<h1>Dízimos & Ofertas</h1>
 
 <p>
 Sua contribuição ajuda a expandir o Reino de Deus.
 </p>
 
 </section>
+
+<section class="pix-section">
+
+<div class="pix-card">
+
+<img
+src="assets/qrcode-pix.png"
+class="pix-img">
+
+<h2>Chave PIX</h2>
+
+<p>
+pix@primeiraieq.com.br
+</p>
+
+<button onclick="copiarPix()">
+
+Copiar Chave
+
+</button>
+
+</div>
+
+</section>
+
+<script>
+
+function copiarPix(){
+
+navigator.clipboard.writeText(
+"pix@primeiraieq.com.br"
+);
+
+alert("Chave PIX copiada!");
+
+}
+
+</script>
+
+</body>
+
+</html>
