@@ -1,20 +1,33 @@
-function login() {
+const menuBtn =
+document.getElementById("menu-btn");
 
-let usuario =
-document.getElementById("usuario").value;
+const nav =
+document.querySelector("nav");
 
-let senha =
-document.getElementById("senha").value;
+menuBtn.addEventListener("click", () => {
 
-if(usuario === "jaque" && senha === "123"){
-    
-    window.location.href =
-    "painel.html";
+    if(nav.style.display === "flex"){
 
-}else{
+        nav.style.display = "none";
 
-    alert("Usuário ou senha incorretos");
+    }else{
 
-}
+        nav.style.display = "flex";
 
-}
+        nav.style.flexDirection = "column";
+
+        nav.style.position = "absolute";
+
+        nav.style.top = "80px";
+
+        nav.style.left = "0";
+
+        nav.style.width = "100%";
+
+        nav.style.background = "#050B14";
+
+        nav.style.padding = "20px";
+
+    }
+
+});
