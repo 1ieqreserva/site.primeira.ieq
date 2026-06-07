@@ -30,4 +30,24 @@ menuBtn.addEventListener("click", () => {
 
     }
 
+    const popup =
+document.getElementById("popup");
+
+const fechar =
+document.getElementById("fecharPopup");
+
+const fecharX =
+document.querySelector(".close-popup");
+
+fechar.addEventListener("click",()=>{
+
+popup.style.display="none";
+
+});
+
+fecharX.addEventListener("click",()=>{
+
+popup.style.display="none";
+
+});
 });
